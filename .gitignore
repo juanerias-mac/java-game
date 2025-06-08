@@ -1,0 +1,58 @@
+# Java build output
+bin/
+out/
+build/
+
+# VS Code settings
+.vscode/
+
+# IntelliJ IDEA settings (if you try IntelliJ later)
+.idea/
+*.iml
+
+# Eclipse settings (if you use Eclipse)
+.classpath
+.project
+.settings/
+
+# Compiled class files
+*.class
+
+# Logs
+*.log
+
+# OS junk files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Windows generated files
+$RECYCLE.BIN/
+*.lnk
+
+# Mac generated files
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Other common excludes
+*.bak
+*.old
+*.orig
+
+# Node.js (in case you add frontend later!)
+node_modules/
+
+# Python virtualenv (in case you mix with Python tools later)
+venv/
+__pycache__/
+*.pyc
+
+# Maven / Gradle (in case you use them later)
+target/
+.gradle/
