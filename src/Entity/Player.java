@@ -52,34 +52,41 @@ public class Player extends Entity {
 
 
     public void update() {
-        if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true){
+        
 
+        boolean moving = false;
 
-            if(keyH.upPressed == true) {
+        int oldX = x;
+        int oldY = y;
+
+        if(keyH.upPressed == true) {
             direction = "up";
             y -= speed;
+            moving = true;
             
         }
         else if (keyH.downPressed == true) {
             direction = "down";
             y += speed;
+            moving = true;
             
         }
         else if (keyH.leftPressed == true) {
             direction = "left";
             x -= speed;
+            moving = true;
             
         }
         else if (keyH.rightPressed == true) {
             direction = "right";
             x += speed;
+            moving = true;
             
         }
-
+        if(moving && (x != oldX || y != oldY)){
         spriteCounter++;
 
-        
-        if(spriteCounter > 10){
+        if(spriteCounter > 12){
             if(spriteNum == 1){
                 spriteNum = 2;
             }
@@ -87,11 +94,16 @@ public class Player extends Entity {
                 spriteNum = 1;
             }
             spriteCounter = 0;
-        }
-    }
-
+        } 
         
-}
+    } else {
+            spriteNum = 1;
+        }
+   
+ }
+  
+
+
     public void draw(Graphics2D g2) {
             // g2.setColor(Color.white);
 
